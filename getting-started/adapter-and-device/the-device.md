@@ -337,7 +337,7 @@ The `deviceLostCallback` must outlive the device, so that when the latter gets d
 
 ### Uncaptured Error Callback
 
-The uncaptured error callback is invoked whenever we misuse the API, and gives very informative feedback about what went wrong. It only set after the creation of the device, by calling `wgpuDeviceSetUncapturedErrorCallback`:
+The uncaptured error callback is invoked whenever we misuse the API, and gives very informative feedback about what went wrong. It is only set after the creation of the device, by calling `wgpuDeviceSetUncapturedErrorCallback`:
 
 ```{lit} C++, Setup device callbacks
 auto onDeviceError = [](WGPUErrorType type, char const* message, void* /* pUserData */) {
